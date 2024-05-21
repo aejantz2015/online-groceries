@@ -2,8 +2,15 @@
 
 # dependencies
 /node_modules
+node_modules/
+node_modules
 /.pnp
 .pnp.js
+
+logs
+*.log
+.npm
+.eslintcache
 
 # testing
 /coverage
