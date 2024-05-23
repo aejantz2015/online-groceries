@@ -38,6 +38,11 @@ const userSchema = new Schema({
       type: Number,
       required: true,
     },
+    quantity: {
+      type: Number,
+      required: true,
+      default: 1, // Default quantity is 1
+    }
   }],
   orders: [
     {

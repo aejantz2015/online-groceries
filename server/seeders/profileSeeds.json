@@ -1,0 +1,112 @@
+[
+    {
+      "firstName": "John",
+      "lastName": "Doe",
+      "username": "john_doe",
+      "email": "john@example.com",
+      "password": "hashed_password",
+      "cart": [
+        { "groceryItem": "Apple", "price": 0.50, "quantity": 1 }
+      ]
+    },
+    {
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "username": "jane_smith",
+      "email": "jane@example.com",
+      "password": "hashed_password",
+      "cart": [
+        { "groceryItem": "Banana", "price": 0.75, "quantity": 2 },
+        { "groceryItem": "Milk", "price": 2.00, "quantity": 1 },
+        { "groceryItem": "Eggs", "price": 3.50, "quantity": 1 },
+        { "groceryItem": "Steak", "price": 8.00, "quantity": 1 }
+      ]
+    },
+    {
+      "firstName": "Jack",
+      "lastName": "Black",
+      "username": "jack_black",
+      "email": "jack@example.com",
+      "password": "hashed_password",
+      "cart": [
+        { "groceryItem": "Apple", "price": 0.50, "quantity": 3 },
+        { "groceryItem": "Milk", "price": 2.00, "quantity": 1 },
+        { "groceryItem": "Banana", "price": 0.75, "quantity": 2 },
+        { "groceryItem": "Bread", "price": 2.50, "quantity": 1 },
+        { "groceryItem": "Chicken", "price": 5.00, "quantity": 1 },
+        { "groceryItem": "Cereal", "price": 4.50, "quantity": 1 },
+        { "groceryItem": "Orange", "price": 1.25, "quantity": 4 }
+      ]
+    },
+    {
+      "firstName": "Will",
+      "lastName": "Smith",
+      "username": "will_smith",
+      "email": "will@example.com",
+      "password": "hashed_password",
+      "cart": [
+        { "groceryItem": "Steak", "price": 8.00, "quantity": 1 },
+        { "groceryItem": "Banana", "price": 0.75, "quantity": 4 },
+        { "groceryItem": "Apple", "price": 0.50, "quantity": 1 }
+      ]
+    },
+    {
+      "firstName": "Travis",
+      "lastName": "Kelce",
+      "username": "travis_kelce",
+      "email": "TKelceIsTheMan@ChiefsAreTheBest.com",
+      "password": "hashed_password",
+      "cart": [
+        { "groceryItem": "Milk", "price": 2.00, "quantity": 2 },
+        { "groceryItem": "Chicken", "price": 5.00, "quantity": 1 },
+        { "groceryItem": "Banana", "price": 0.75, "quantity": 3 }
+      ]
+    },
+    {
+        "firstName": "Taylor",
+        "lastName": "Swift",
+        "username": "taylor_swift",
+        "email": "TSwift@SoInLoveWithTrav.com",
+        "password": "hashed_password",
+        "cart": [
+          { "groceryItem": "Eggs", "price": 3.50, "quantity": 2 },
+          { "groceryItem": "Apple", "price": 0.50, "quantity": 2 },
+          { "groceryItem": "Banana", "price": 0.75, "quantity": 1 }
+        ]
+      },
+      {
+        "firstName": "Cool",
+        "lastName": "Kid",
+        "username": "cool_kid",
+        "email": "cool@example.com",
+        "password": "hashed_password",
+        "cart": [
+          { "groceryItem": "Orange", "price": 1.25, "quantity": 3 },
+          { "groceryItem": "Milk", "price": 2.00, "quantity": 1 },
+          { "groceryItem": "Chicken", "price": 5.00, "quantity": 2 },
+          { "groceryItem": "Apple", "price": 0.50, "quantity": 1 }
+        ]
+      },
+      {
+        "firstName": "Patrick",
+        "lastName": "Mahomes",
+        "username": "patrick_mahomes",
+        "email": "MVPat@ChiefsAreTheBest.com",
+        "password": "hashed_password",
+        "cart": [
+          { "groceryItem": "Ketchup", "price": 3.00, "quantity": 50}
+        ]
+      },
+      {
+        "firstName": "Catie",
+        "lastName": "Bowes",
+        "username": "catie_bowes",
+        "email": "catie@example.com",
+        "password": "hashed_password",
+        "cart": [
+          { "groceryItem": "Apple", "price": 0.50, "quantity": 3 },
+          { "groceryItem": "Milk", "price": 2.00, "quantity": 1 },
+          { "groceryItem": "Banana", "price": 0.75, "quantity": 1 }
+        ]
+      }
+  ]
