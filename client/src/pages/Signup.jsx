@@ -1,7 +1,9 @@
+import AddUser from "../components/AddUser";
+
 function Signup() {
   return (
     <>
-      <h1>Signup</h1>
+      <AddUser />
     </>
   );
 }
