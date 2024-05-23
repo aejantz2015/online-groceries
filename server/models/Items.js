@@ -17,4 +17,18 @@ const itemsSchema = new Schema({
         required: true,
         min: 0.99
     },
+    quantity: {
+        type: Number,
+        min: 0,
+        default: 0
+    },
+    department: {
+        type: Schema.Types.ObjectId,
+        ref: "Department",
+        required: true
+    }
 })
+
+const Items = model('Items', itemsSchema);
+  
+  module.exports = Items;
