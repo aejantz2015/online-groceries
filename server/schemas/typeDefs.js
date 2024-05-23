@@ -8,18 +8,18 @@ type Department {
 
 type Items {
     _id: ID
-    name: string
+    name: String
     description: String
     image: String
     price: Float
-    quantity: Ing
+    quantity: Int
     department: Department
 }
 
 type Order {
     _id: ID
     purchaseDate: String
-    items: Items
+    items: [Items]
 }
 
 type User {
@@ -27,7 +27,7 @@ type User {
     firstName: String
     lastName: String
     email: String
-    orders: Orders
+    orders: [Orders]
 }
 type Cart {
     session: ID
@@ -39,16 +39,16 @@ type Auth {
 }
 
 type Query {
-    department: Department
-    items(category: ID, name: String): Items
+    departments: [Department]
+    items(category: ID, name: String): [Items]
     user: User
     order(_id: ID!): Orders
     cart(items: [ID!]): Cart
 }
 
 type Mutation {
-    addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
-    addOrder(products: [ID]!): Orders
+    createUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
+    createOrder(products: [ID]!): Orders
     updateUser(firstName: String, lastName: String, email: String, password: String): User
     updateItems(_id: ID!, quantity: Int!): Item
     login(email: String!, password: String!): Auth
