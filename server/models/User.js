@@ -3,10 +3,14 @@ const bcrypt = require('bcrypt');
 
 const userSchema = new Schema({
     firstName: {
-
+      type: String,
+      required: true,
+      trim: true
     },
     lastName: {
-
+      type: String,
+      required: true,
+      trim: true
     },
     username: {
     type: String,
@@ -25,9 +29,22 @@ const userSchema = new Schema({
     required: true,
     minlength: 5,
   },
-  orders: {
-
-  },
+  cart: [{
+    groceryItem: {
+      type: String,
+      required: true,
+    },
+    price: {
+      type: Number,
+      required: true,
+    },
+  }],
+  orders: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Orders"
+    }
+  ]
 })
 
 userSchema.pre('save', async function (next) {
