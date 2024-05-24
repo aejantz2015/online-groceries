@@ -6,15 +6,16 @@ import { Link } from "react-router-dom";
 
 function Login() {
   const [formState, setFormState] = useState({ email: "", password: "" });
-  const [login] = useMutation(LOGIN);
+  const [login, { error }] = useMutation(LOGIN);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {
+      console.log(event);
       const mutationResponse = await login({
         variables: { email: formState.email, password: formState.password },
       });
-
+      console.log("mutation response", mutationResponse);
       const token = mutationResponse.data.login.token;
       Auth.login(token);
     } catch (error) {
@@ -33,15 +34,24 @@ function Login() {
   return (
     <>
       <h1>Login</h1>
-      <h6>
+      <h3>
         New User? <Link to="/signup">Signup</Link> here!
-      </h6>
-      <form>
-        <label htmlFor="email">Email:</label>
-        <input name="email" type="email" onChange={handleChange} />
-        <label htmlFor="password">Password:</label>
-        <input name="password" type="password" onChange={handleChange} />
-        <button onClick={handleFormSubmit}>Submit</button>
+      </h3>
+      <form onSubmit={handleFormSubmit}>
+        <div>
+          <label htmlFor="email">Email:</label>
+          <input name="email" type="email" onChange={handleChange} />
+        </div>
+        <div>
+          <label htmlFor="password">Password:</label>
+          <input name="password" type="password" onChange={handleChange} />
+        </div>
+        {error ? (
+          <div>
+            <p>The login is incorrect</p>
+          </div>
+        ) : null}
+        <button type="submit">Submit</button>
       </form>
     </>
   );

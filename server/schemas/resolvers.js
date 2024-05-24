@@ -1,4 +1,5 @@
 const { User, Orders, Items, Department } = require("../models");
+const { signToken, AuthenticationError } = require("../utils/auth");
 
 const resolvers = {
   Query: {
@@ -34,7 +35,7 @@ const resolvers = {
 
         return user;
       }
-      throw new AuthenticationError("You are not logged in.");
+      throw AuthenticationError;
     },
     order: async (parent, { _id }, context) => {
       if (context.user) {
@@ -45,7 +46,7 @@ const resolvers = {
 
         return user.orders.id(_id);
       }
-      throw new AuthenticationError("You are not logged in.");
+      throw AuthenticationError;
     },
     cart: async (parent, args, context) => {
       const URL = new URL(context.headers.referer).origin;
