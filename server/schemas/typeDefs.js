@@ -1,6 +1,4 @@
-const { gql } = require('apollo-server-express')
-
-const typeDefs = qql`
+const typeDefs = `
 type Department {
     _id: ID
     name: String
@@ -16,7 +14,7 @@ type Items {
     department: Department
 }
 
-type Order {
+type Orders {
     _id: ID
     purchaseDate: String
     items: [Items]
@@ -50,9 +48,9 @@ type Mutation {
     createUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
     createOrder(products: [ID]!): Orders
     updateUser(firstName: String, lastName: String, email: String, password: String): User
-    updateItems(_id: ID!, quantity: Int!): Item
+    updateItems(_id: ID!, quantity: Int!): Items
     login(email: String!, password: String!): Auth
 }
 `;
 
-module.exports = typeDefs
+module.exports = typeDefs;
