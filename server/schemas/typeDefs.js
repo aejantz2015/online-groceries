@@ -24,6 +24,7 @@ type User {
     _id: ID
     firstName: String
     lastName: String
+    username: String
     email: String
     orders: [Orders]
 }
@@ -45,7 +46,7 @@ type Query {
 }
 
 type Mutation {
-    createUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
+    createUser(firstName: String!, lastName: String!, username: String!, email: String!, password: String!): Auth
     createOrder(products: [ID]!): Orders
     updateUser(firstName: String, lastName: String, email: String, password: String): User
     updateItems(_id: ID!, quantity: Int!): Items
