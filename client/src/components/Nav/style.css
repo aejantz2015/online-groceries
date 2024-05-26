@@ -1,0 +1,9 @@
+ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+ul li {
+    list-style: none;
+    margin: 5px;
+}
