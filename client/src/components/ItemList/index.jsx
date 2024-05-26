@@ -1,7 +1,5 @@
 const ItemList = (items) => {
-  console.log("this is the item from ItemList", items);
   const itemKeys = Object.values(items);
-  console.log("this is the index itemkeys", itemKeys);
 
   return (
     <div>

@@ -5,7 +5,6 @@ import ItemList from "../components/ItemList";
 const Home = () => {
   const { loading, data } = useQuery(QUERY_ITEMS);
   let items = data?.items || [];
-  console.log("items from home page", items);
 
   return (
     <>
