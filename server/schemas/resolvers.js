@@ -14,7 +14,7 @@ const resolvers = {
     },
     user: async (parents, args, context) => {
       if (context.user) {
-        const user = await User.findById(context.user._id).populate({
+        const user = await User.findById(context.user.email).populate({
           path: "orders.items",
           populate: "department",
         });
@@ -24,6 +24,9 @@ const resolvers = {
         return user;
       }
       throw AuthenticationError;
+    },
+    users: async () => {
+      return User.find();
     },
     order: async (parent, { _id }, context) => {
       if (context.user) {
@@ -116,7 +119,7 @@ const resolvers = {
         throw AuthenticationError;
       }
 
-      const rightPW = await user.isRightPassword(password);
+      const rightPW = await user.isCorrectPassword(password);
 
       if (!rightPW) {
         throw AuthenticationError;

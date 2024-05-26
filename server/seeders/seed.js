@@ -280,7 +280,7 @@ db.once("open", async () => {
     // More items as needed. Not making a lot atm.
     console.log("items have been seeded");
 
-    await User.insertMany(profileSeeds);
+    await User.create(profileSeeds);
     // I'm going to try to seed previous orders for specific users only if that user is signed in. For example, John Doe should only see John Doe's previous orders. John Doe should not see Jack Black's previous orders.
 
     console.log("Seeded Database Successfully. SICK!");
