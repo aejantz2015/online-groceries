@@ -42,6 +42,7 @@ type Query {
     items: [Items]
     item(department: ID, name: String): [Items]
     user: User
+    users: [User]
     order(_id: ID!): Orders
     cart(items: [ID!]): Cart
 }

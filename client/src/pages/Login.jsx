@@ -6,21 +6,17 @@ import { Link } from "react-router-dom";
 
 function Login() {
   const [formState, setFormState] = useState({ email: "", password: "" });
-  const [login, { error }] = useMutation(LOGIN);
+  const [login] = useMutation(LOGIN);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    try {
-      console.log(event);
-      const mutationResponse = await login({
-        variables: { email: formState.email, password: formState.password },
-      });
-      console.log("mutation response", mutationResponse);
-      const token = mutationResponse.data.login.token;
-      Auth.login(token);
-    } catch (error) {
-      console.log(error);
-    }
+    const mutationResponse = await login({
+      variables: { email: formState.email, password: formState.password },
+    });
+    console.log("mutation response", mutationResponse);
+    const token = mutationResponse.data.login.token;
+    console.log(token);
+    Auth.login(token);
   };
 
   const handleChange = (event) => {
@@ -46,11 +42,6 @@ function Login() {
           <label htmlFor="password">Password:</label>
           <input name="password" type="password" onChange={handleChange} />
         </div>
-        {error ? (
-          <div>
-            <p>The login is incorrect</p>
-          </div>
-        ) : null}
         <button type="submit">Submit</button>
       </form>
     </>
