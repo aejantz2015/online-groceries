@@ -15,4 +15,19 @@
 .shoppingcart {
   color: black;
   background-color: yellow;
+  height: 30px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between; 
+}
+
+.subwrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.searchbar {
+  margin-right: 10px;
 }
