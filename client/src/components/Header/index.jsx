@@ -5,16 +5,16 @@ import "./style.css";
 export default function Header() {
   return (
     <div className="mainheader">
-      <div class = 'wrapper'> 
-      <h1 className="title">PAC Groceries</h1>
-      <div>
-        <input class = 'searchbar'></input>
-      <button className="shoppingcart">My Cart</button>
+      <div className="wrapper">
+        <h1 className="title">PAC Groceries</h1>
+        <div>
+          <input className="searchbar"></input>
+          <button className="shoppingcart">My Cart</button>
+        </div>
       </div>
-      </div>
-      <div class = 'subwrapper'>
-      <Departments />
-      <Nav />
+      <div className="subwrapper">
+        <Departments />
+        <Nav />
       </div>
     </div>
   );

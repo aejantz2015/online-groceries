@@ -3,13 +3,14 @@ import "./style.css";
 export default function Departments() {
   return (
     <div>
-      <button className="deptbutton">Dairy & eggs</button>
-      <button className="deptbutton">Frozen</button>
-      <button className="deptbutton">Meat & Seafood</button>
-      <button className="deptbutton">Beverages</button>
-      <button className="deptbutton">Pantry</button>
-      <button className="deptbutton">Produce</button>
-      <button className="deptbutton">Snacks</button>
+      <button className="deptbutton">dairy & eggs</button>
+      <button className="deptbutton">frozen</button>
+      <button className="deptbutton">meat & seafood</button>
+      <button className="deptbutton">beverages</button>
+      <button className="deptbutton">pantry</button>
+      <button className="deptbutton">produce</button>
+      <button className="deptbutton">snacks</button>
+      <button className="deptbutton">all</button>
     </div>
   );
 }

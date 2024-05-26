@@ -1,12 +1,17 @@
-import Departments from "../components/Departments/index";
+import { useQuery } from "@apollo/client";
+import { QUERY_ITEMS } from "../utils/queries";
+import ItemList from "../components/ItemList";
 
-function Home() {
+const Home = () => {
+  const { loading, data } = useQuery(QUERY_ITEMS);
+  let items = data?.items || [];
+
   return (
     <>
       <h1>Home</h1>
-      {/* <Departments /> */}
+      {loading ? <p>loading....</p> : <ItemList items={items} />}
     </>
   );
-}
+};
 
 export default Home;
