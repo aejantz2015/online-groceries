@@ -1,5 +1,6 @@
 import { NavLink, useLocation } from "react-router-dom";
-import './style.css'
+import auth from "../../utils/auth";
+import "./style.css";
 
 function Nav() {
   const currentPage = useLocation().pathname;
@@ -45,7 +46,11 @@ function Nav() {
             Signup
           </NavLink>
         </li>
-        <li>Logout</li>
+        <li>
+          <a href="/" onClick={() => auth.logout()}>
+            Logout
+          </a>
+        </li>
       </ul>
     </>
   );
