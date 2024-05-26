@@ -39,7 +39,8 @@ type Auth {
 
 type Query {
     departments: [Department]
-    items(category: ID, name: String): [Items]
+    items: [Items]
+    item(department: ID, name: String): [Items]
     user: User
     order(_id: ID!): Orders
     cart(items: [ID!]): Cart

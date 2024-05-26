@@ -6,22 +6,10 @@ const resolvers = {
     departments: async () => {
       return await Department.find();
     },
-    items: async (parent, { department, name }) => {
-      const params = {};
-
-      if (department) {
-        params.department = department;
-      }
-
-      if (name) {
-        params.name = {
-          $regex: name,
-        };
-      }
-
-      return await Items.find(params).populate("department");
+    items: async () => {
+      return Items.find();
     },
-    items: async (parent, { _id }) => {
+    item: async (parent, { _id }) => {
       return await Items.findById(_id).populate("department");
     },
     user: async (parents, args, context) => {
@@ -125,13 +113,13 @@ const resolvers = {
       const user = await User.findOne({ email });
 
       if (!user) {
-        throw new AuthenticationError("No user found.");
+        throw AuthenticationError;
       }
 
       const rightPW = await user.isRightPassword(password);
 
       if (!rightPW) {
-        throw new AuthenticationError("Incorrect password");
+        throw AuthenticationError;
       }
 
       const token = signToken(user);
