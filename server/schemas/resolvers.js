@@ -10,8 +10,9 @@ const resolvers = {
       return Items.find();
     },
     item: async (parent, { _id }) => {
-      return await Items.findById(_id).populate("department");
+      return await Items.findById({ _id });
     },
+
     user: async (parents, args, context) => {
       if (context.user) {
         const user = await User.findById(context.user.email).populate({

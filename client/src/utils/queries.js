@@ -14,15 +14,14 @@ export const QUERY_ITEMS = gql`
 `;
 
 export const QUERY_SINGLE_ITEM = gql`
-  query singleItem($itemId: ID!) {
-    item(itemId: $itemId) {
+  query item($id: ID!) {
+    item(_id: $id) {
       _id
+      image
       name
       description
-      image
       price
       quantity
-      department
     }
   }
 `;
