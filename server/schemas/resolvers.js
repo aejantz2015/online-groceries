@@ -1,17 +1,19 @@
 const { User, Orders, Items, Department } = require("../models");
+const { populate } = require("../models/User");
 const { signToken, AuthenticationError } = require("../utils/auth");
 
 const resolvers = {
   Query: {
-    departments: async () => {
+    department: async () => {
       return await Department.find();
     },
     items: async () => {
-      return Items.find();
+      return Items.find().populate("department");
     },
     item: async (parent, { _id }) => {
-      return await Items.findById(_id).populate("department");
+      return await Items.findById({ _id });
     },
+
     user: async (parents, args, context) => {
       if (context.user) {
         const user = await User.findById(context.user.email).populate({

@@ -6,12 +6,7 @@ const Home = () => {
   const { loading, data } = useQuery(QUERY_ITEMS);
   let items = data?.items || [];
 
-  return (
-    <>
-      <h1>Home</h1>
-      {loading ? <p>loading....</p> : <ItemList items={items} />}
-    </>
-  );
+  return <>{loading ? <p>loading....</p> : <ItemList items={items} />}</>;
 };
 
 export default Home;

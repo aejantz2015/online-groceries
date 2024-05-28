@@ -3,26 +3,29 @@ import { gql } from "@apollo/client";
 export const QUERY_ITEMS = gql`
   query allItems {
     items {
-      description
+      _id
       image
       name
+      description
       price
       quantity
-      _id
+      department {
+        _id
+        name
+      }
     }
   }
 `;
 
 export const QUERY_SINGLE_ITEM = gql`
-  query singleItem($itemId: ID!) {
-    item(itemId: $itemId) {
+  query item($id: ID!) {
+    item(_id: $id) {
       _id
+      image
       name
       description
-      image
       price
       quantity
-      department
     }
   }
 `;
@@ -33,6 +36,15 @@ export const QUERY_ME = gql`
       _id
       name
       skills
+    }
+  }
+`;
+
+export const QUERY_DEPARTMENT = gql`
+  query department {
+    department {
+      _id
+      name
     }
   }
 `;

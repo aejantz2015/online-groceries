@@ -7,12 +7,12 @@ const db = require("../config/connection");
 db.once("open", async () => {
   try {
     await cleanDB("User", "users");
-    await cleanDB("Department", "departments");
+    await cleanDB("Department", "department");
     await cleanDB("Items", "items");
     await cleanDB("Orders", "orders");
 
     // Department seeds. Needed? Can create JSON if required.
-    const departments = await Department.insertMany([
+    const department = await Department.insertMany([
       { name: "produce" },
       { name: "dairy" },
       { name: "beverages" },
@@ -34,7 +34,7 @@ db.once("open", async () => {
         image: "coke.png",
         price: 4.99,
         quantity: 7,
-        departments: departments[2]._id,
+        department: department[2]._id,
       },
       {
         name: "Simply Lemonade",
@@ -42,7 +42,7 @@ db.once("open", async () => {
         image: "lemonade.png",
         price: 3.47,
         quantity: 11,
-        departments: departments[2]._id,
+        department: department[2]._id,
       },
       {
         name: "Tropicana Orange Juice",
@@ -50,7 +50,7 @@ db.once("open", async () => {
         image: "orangejuice.png",
         price: 7.28,
         quantity: 3,
-        departments: departments[2]._id,
+        department: department[2]._id,
       },
       {
         name: "Pure Life Water",
@@ -58,7 +58,7 @@ db.once("open", async () => {
         image: "packofwater.png",
         price: 3.78,
         quantity: 12,
-        departments: departments[2]._id,
+        department: department[2]._id,
       },
       {
         name: "Red Diamond Sweet Tea",
@@ -66,7 +66,7 @@ db.once("open", async () => {
         image: "sweettea.png",
         price: 2.25,
         quantity: 11,
-        departments: departments[2]._id,
+        department: department[2]._id,
       },
       {
         name: "Large Eggs",
@@ -74,7 +74,7 @@ db.once("open", async () => {
         image: "eggs.png",
         price: 2.52,
         quantity: 13,
-        departments: departments[1]._id,
+        department: department[1]._id,
       },
       {
         name: "Tyson Fun Nuggets",
@@ -82,7 +82,7 @@ db.once("open", async () => {
         image: "chickennuggets.png",
         price: 8.97,
         quantity: 4,
-        departments: departments[5]._id,
+        department: department[5]._id,
       },
       {
         name: "5 Cheese Texas Toast",
@@ -90,7 +90,7 @@ db.once("open", async () => {
         image: "garlicbread.png",
         price: 4.24,
         quantity: 10,
-        departments: departments[5]._id,
+        department: department[5]._id,
       },
       {
         name: "Blue Bunny Super Fudge Brownie",
@@ -98,7 +98,7 @@ db.once("open", async () => {
         image: "icecream.png",
         price: 5.13,
         quantity: 9,
-        departments: departments[5]._id,
+        department: department[5]._id,
       },
       {
         name: "Red Baron Supreme Pizza",
@@ -106,7 +106,7 @@ db.once("open", async () => {
         image: "pizza.png",
         price: 6.81,
         quantity: 12,
-        departments: departments[5]._id,
+        department: department[5]._id,
       },
       {
         name: "Ore-Ida Crispy Crowns",
@@ -114,7 +114,7 @@ db.once("open", async () => {
         image: "potatoes.png",
         price: 6.42,
         quantity: 8,
-        departments: departments[5]._id,
+        department: department[5]._id,
       },
       {
         name: "Farmland Classic Cut Bacon",
@@ -122,7 +122,7 @@ db.once("open", async () => {
         image: "bacon.png",
         price: 5.77,
         quantity: 8,
-        departments: departments[3]._id,
+        department: department[3]._id,
       },
       {
         name: "Boneless Skinless Chicken",
@@ -130,7 +130,7 @@ db.once("open", async () => {
         image: "chicken.png",
         price: 9.82,
         quantity: 13,
-        departments: departments[3]._id,
+        department: department[3]._id,
       },
       {
         name: "93% Lean Ground Beef",
@@ -138,7 +138,7 @@ db.once("open", async () => {
         image: "groundbeef.png",
         price: 3.33,
         quantity: 10,
-        departments: departments[3]._id,
+        department: department[3]._id,
       },
       {
         name: "Alaska Sockeye Salmon",
@@ -146,7 +146,7 @@ db.once("open", async () => {
         image: "salmon.png",
         price: 7.14,
         quantity: 4,
-        departments: departments[3]._id,
+        department: department[3]._id,
       },
       {
         name: "Colossal Cooked Shrimp",
@@ -154,7 +154,7 @@ db.once("open", async () => {
         image: "shrimp.png",
         price: 8.97,
         quantity: 5,
-        departments: departments[3]._id,
+        department: department[3]._id,
       },
       {
         name: "GV Light Brown Sugar",
@@ -162,7 +162,7 @@ db.once("open", async () => {
         image: "brownsugar.png",
         price: 1.88,
         quantity: 10,
-        departments: departments[4]._id,
+        department: department[4]._id,
       },
       {
         name: "Chef Boyardee Mini Ravioli",
@@ -170,7 +170,7 @@ db.once("open", async () => {
         image: "chefb.png",
         price: 6.21,
         quantity: 5,
-        departments: departments[4]._id,
+        department: department[4]._id,
       },
       {
         name: "Ghirardelli Chocolate Chips",
@@ -178,7 +178,7 @@ db.once("open", async () => {
         image: "chocochips.png",
         price: 5.92,
         quantity: 3,
-        departments: departments[4]._id,
+        department: department[4]._id,
       },
       {
         name: "McCormick Garlic Powder",
@@ -186,7 +186,7 @@ db.once("open", async () => {
         image: "garlicpowd.png",
         price: 7.14,
         quantity: 5,
-        departments: departments[4]._id,
+        department: department[4]._id,
       },
       {
         name: "GV Petite Dice Tomatoes",
@@ -194,7 +194,7 @@ db.once("open", async () => {
         image: "tomato.png",
         price: 1.28,
         quantity: 24,
-        departments: departments[4]._id,
+        department: department[4]._id,
       },
       {
         name: "Jazz Apples",
@@ -202,7 +202,7 @@ db.once("open", async () => {
         image: "apples.png",
         price: 5.25,
         quantity: 6,
-        departments: departments[0]._id,
+        department: department[0]._id,
       },
       {
         name: "Bell Peppers",
@@ -210,7 +210,7 @@ db.once("open", async () => {
         image: "bellpeps.png",
         price: 4.44,
         quantity: 7,
-        departments: departments[0]._id,
+        department: department[0]._id,
       },
       {
         name: "Blackberries",
@@ -218,7 +218,7 @@ db.once("open", async () => {
         image: "blackberries.png",
         price: 4.64,
         quantity: 2,
-        departments: departments[0]._id,
+        department: department[0]._id,
       },
       {
         name: "Broccoli Crown",
@@ -226,7 +226,7 @@ db.once("open", async () => {
         image: "broccoli.png",
         price: 1.49,
         quantity: 11,
-        departments: departments[0]._id,
+        department: department[0]._id,
       },
       {
         name: "Strawberries",
@@ -234,7 +234,7 @@ db.once("open", async () => {
         image: "strawberries.png",
         price: 4.88,
         quantity: 12,
-        departments: departments[0]._id,
+        department: department[0]._id,
       },
       {
         name: "Cheez-It Snack Mix",
@@ -242,7 +242,7 @@ db.once("open", async () => {
         image: "cheezit.png",
         price: 4.82,
         quantity: 6,
-        departments: departments[6]._id,
+        department: department[6]._id,
       },
       {
         name: "Scooby-Doo Fruit Snacks",
@@ -250,7 +250,7 @@ db.once("open", async () => {
         image: "fruitsnack.png",
         price: 7.45,
         quantity: 7,
-        departments: departments[6]._id,
+        department: department[6]._id,
       },
       {
         name: "Goldfish Xtra Cheddar",
@@ -258,7 +258,7 @@ db.once("open", async () => {
         image: "goldfish.png",
         price: 3.74,
         quantity: 8,
-        departments: departments[6]._id,
+        department: department[6]._id,
       },
       {
         name: "Double Stuf Oreos",
@@ -266,7 +266,7 @@ db.once("open", async () => {
         image: "oreos.png",
         price: 5.55,
         quantity: 5,
-        departments: departments[6]._id,
+        department: department[6]._id,
       },
       {
         name: "Teddy Grahams Cocoa",
@@ -274,7 +274,7 @@ db.once("open", async () => {
         image: "teddygrahams.png",
         price: 6.32,
         quantity: 4,
-        departments: departments[6]._id,
+        department: department[6]._id,
       },
     ]);
     // More items as needed. Not making a lot atm.
