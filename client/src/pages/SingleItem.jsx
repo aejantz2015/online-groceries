@@ -7,6 +7,10 @@ const ItemView = () => {
 
   const { loading, data } = useQuery(QUERY_ITEMS);
 
+  if (loading) {
+    console.log("loading...");
+  }
+
   let items = data?.items || [];
 
   const itemKeys = Object.values(items);

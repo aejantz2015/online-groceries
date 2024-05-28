@@ -22,7 +22,7 @@ const itemsSchema = new Schema({
     min: 0,
     default: 0,
   },
-  departments: {
+  department: {
     type: Schema.Types.ObjectId,
     ref: "Department",
     required: true,

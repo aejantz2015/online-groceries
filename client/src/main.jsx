@@ -8,6 +8,7 @@ import Login from "./pages/Login.jsx";
 import Signup from "./pages/Signup.jsx";
 import Error from "./pages/Error.jsx";
 import SingleItem from "./pages/SingleItem.jsx";
+import DepartmentItems from "./pages/DepartmentItems.jsx";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "items/:id",
         element: <SingleItem />,
+      },
+      {
+        path: "department/:name",
+        element: <DepartmentItems />,
       },
     ],
   },

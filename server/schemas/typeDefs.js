@@ -38,8 +38,8 @@ type Auth {
 }
 
 type Query {
-    departments: [Department]
-    items: [Items]
+    department: [Department]
+    items(department: ID, name: String): [Items]
     item(_id: ID!): Items
     user: User
     users: [User]
