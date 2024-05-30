@@ -1,5 +1,6 @@
 import Departments from "../Departments";
 import Nav from "../Nav/index";
+import { Link } from "react-router-dom";
 import "./style.css";
 
 export default function Header() {
@@ -9,7 +10,9 @@ export default function Header() {
         <h1 className="title">PAC Groceries</h1>
         <div>
           <input className="searchbar"></input>
-          <button className="shoppingcart">My Cart</button>
+          <Link to="/cart">
+            <button className="shoppingcart">My Cart</button>
+          </Link>
         </div>
       </div>
       <div className="subwrapper">

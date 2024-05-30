@@ -6,6 +6,7 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
+import StateProvider from "./utils/stateContext";
 
 import Header from "./components/Header/index";
 import Footer from "./components/Footer/index";
@@ -33,13 +34,15 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <div>
-        <Header />
+      <StateProvider>
         <div>
-          <Outlet />
+          <Header />
+          <div>
+            <Outlet />
+          </div>
+          <Footer />
         </div>
-        <Footer />
-      </div>
+      </StateProvider>
     </ApolloProvider>
   );
 }
