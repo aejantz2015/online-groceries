@@ -1,11 +1,19 @@
 import { Link, useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { QUERY_ITEMS } from "../utils/queries";
+import { ADD_TO_CART } from "../utils/actions";
+import { useAppState } from "../utils/stateContext";
 
-const ItemView = () => {
+export const ItemView = () => {
   const { id } = useParams();
 
   const { loading, data } = useQuery(QUERY_ITEMS);
+  const [{ cart }, dispatch] = useAppState();
+  console.log(cart);
+
+  function addToCart(item) {
+    dispatch({ type: ADD_TO_CART, payload: item });
+  }
 
   if (loading) {
     console.log("loading...");
@@ -24,7 +32,7 @@ const ItemView = () => {
   }
 
   return (
-    <>
+    <div key={myItem._id}>
       <h5>
         <Link to="/">⇽ Go Back</Link>
       </h5>
@@ -37,8 +45,8 @@ const ItemView = () => {
       <p>{myItem.description}</p>
       <p>${myItem.price}</p>
       <p>In stock: {myItem.quantity}</p>
-      <button>Add To Cart</button>
-    </>
+      <button onClick={() => addToCart(myItem)}>Add To Cart</button>
+    </div>
   );
 };
 
