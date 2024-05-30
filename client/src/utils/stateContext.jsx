@@ -14,7 +14,7 @@ export const useAppState = () => useContext(StateContext);
 export default function StateProvider({ children }) {
   const initialState = {
     //get it from local storage
-    cart: [],
+    cart: JSON.parse(localStorage.getItem("myCart")) || [],
   };
 
   const [state, dispatch] = useReducer(reducer, initialState);
