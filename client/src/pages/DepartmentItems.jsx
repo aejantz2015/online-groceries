@@ -23,6 +23,8 @@ const DepartmentList = () => {
   // }
 
   function addToCart(item) {
+    const newCart = [...cart, item];
+    localStorage.setItem("myCart", JSON.stringify(newCart));
     dispatch({ type: ADD_TO_CART, payload: item });
   }
 
