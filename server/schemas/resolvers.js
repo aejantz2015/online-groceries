@@ -11,7 +11,7 @@ const resolvers = {
       return Items.find().populate("department");
     },
     item: async (parent, { _id }) => {
-      return await Items.findById({ _id });
+      return Items.findOne({ _id }).populate("department");
     },
 
     user: async (parents, args, context) => {

@@ -14,13 +14,6 @@ const DepartmentList = () => {
 
   const itemKeys = Object.values(items);
   const [{ cart }, dispatch] = useAppState();
-  console.log(cart);
-
-  // function updateStorage(item) {
-  //   const currentStorage = JSON.parse(localStorage.getItem("myCart"));
-  //   console.log(item);
-  //   console.log(currentStorage);
-  // }
 
   function addToCart(item) {
     const newCart = [...cart, item];

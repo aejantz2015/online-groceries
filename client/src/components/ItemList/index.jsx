@@ -4,7 +4,6 @@ import { ADD_TO_CART } from "../../utils/actions";
 
 const ItemList = ({ items }) => {
   const [{ cart }, dispatch] = useAppState();
-  console.log("cart", cart);
 
   function addToCart(item) {
     const newCart = [...cart, item];
