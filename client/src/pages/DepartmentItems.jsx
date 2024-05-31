@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useAppState } from "../utils/stateContext";
 import { ADD_TO_CART } from "../utils/actions";
+import "./departmentItems.css"
 
 const DepartmentList = () => {
   const { name } = useParams();
@@ -33,7 +34,7 @@ const DepartmentList = () => {
   }
 
   return (
-    <div>
+    <div className="display">
       {myDepartment.map((item) => (
         <div key={item._id}>
           <Link to={`/items/${item._id}`}>

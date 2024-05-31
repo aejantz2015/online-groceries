@@ -3,18 +3,18 @@
 }
 
 .mainheader {
-  background-color: greenyellow;
+  background-color: rgb(117, 207, 212);
   margin: 0;
   min-height: 100px;
 }
 
 .title {
   font-size: 5rem;
+  color: white;
 }
 
 .shoppingcart {
-  color: black;
-  background-color: yellow;
+  background-color: rgb(169, 141, 141);
   height: 30px;
 }
 
