@@ -26,6 +26,10 @@ export const QUERY_SINGLE_ITEM = gql`
       description
       price
       quantity
+      department {
+        _id
+        name
+      }
     }
   }
 `;
