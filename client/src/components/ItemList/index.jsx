@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import { useAppState } from "../../utils/stateContext";
 import { ADD_TO_CART } from "../../utils/actions";
+import "./style.css" 
 
 const ItemList = ({ items }) => {
   const [{ cart }, dispatch] = useAppState();
+  console.log("cart", cart);
 
   function addToCart(item) {
     const newCart = [...cart, item];
@@ -12,7 +14,7 @@ const ItemList = ({ items }) => {
   }
 
   return (
-    <div>
+    <div className ='display'> 
       {items.map((item) => (
         <div key={item._id}>
           <Link to={`/items/${item._id}`}>
