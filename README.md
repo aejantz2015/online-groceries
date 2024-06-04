@@ -1,6 +1,6 @@
 # online-groceries [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-  In this application, a user will be able to shop stress free for their groceries. It allows the user to search for groceries they may want, or the user can go through the different departments and leisurely scroll through different food items to add to their cart. In the cart, the user will be able to edit it and remove items. Once the grocery shopping is completed, the user will be able to pay for their groceries online without worry of having to go in to the store.
+  In this application, a user will be able to shop stress free for their groceries. It allows the user to search for groceries they may want, or the user can go through the different departments and leisurely scroll through different food items to add to their cart. In the cart, the user will be able to edit it and remove items.
 
   ## Table of Contents
   1. [Installation](#installation)
@@ -18,17 +18,17 @@
   ![Screenshot](./client/public/screenshots/screenshot1.png)
   ![Screenshot](./client/public/screenshots/screenshot2.png)
   ![Screenshot](./client/public/screenshots/screenshot3.png)
-  ![Screenshot](./client/public/screenshots/screenshot.png)
+  ![Screenshot](./client/public/screenshots/screenshot4.png)
 
   ## License
   MIT
 
   ## Contributors
-  Courtney Hook, Student
-  Anna Jantzen, Student
-  Patrick Bowen, Student
-  Chris Baird, Tutor
-  Ian Von Fange, TA
+    Courtney Hook, Student
+    Anna Jantzen, Student
+    Patrick Bowen, Student
+    Chris Baird, Tutor
+    Ian Von Fange, TA
   
 
   ## Tests
