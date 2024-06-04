@@ -1,18 +1,23 @@
-import { useAppState } from '../../utils/stateContext';
-import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY } from '../../utils/actions';
-import PaymentForm from '../Stripe/PaymentForm';
-import './style.css';
+import { useAppState } from "../../utils/stateContext";
+import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
+import PaymentForm from "../Stripe/PaymentForm";
+import "./style.css";
 
 export const Cart = () => {
   const [{ cart }, dispatch] = useAppState();
 
   const calculateTotal = () => {
-    return cart.reduce((acc, item) => acc + item.price * item.quantity, 0).toFixed(2);
+    return cart
+      .reduce((acc, item) => acc + item.price * item.quantity, 0)
+      .toFixed(2);
   };
 
   const handleQuantityChange = (item, newQuantity) => {
     if (newQuantity < 1) return;
-    dispatch({ type: UPDATE_CART_QUANTITY, payload: { ...item, quantity: newQuantity } });
+    dispatch({
+      type: UPDATE_CART_QUANTITY,
+      payload: { ...item, quantity: newQuantity },
+    });
   };
 
   const handleRemoveItem = (itemId) => {
@@ -37,10 +42,14 @@ export const Cart = () => {
                 <input
                   type="number"
                   value={item.quantity}
-                  onChange={(e) => handleQuantityChange(item, parseInt(e.target.value))}
+                  onChange={(e) =>
+                    handleQuantityChange(item, parseInt(e.target.value))
+                  }
                   min="1"
                 />
-                <button onClick={() => handleRemoveItem(item._id)}>Remove</button>
+                <button onClick={() => handleRemoveItem(item._id)}>
+                  Remove
+                </button>
               </div>
             </div>
           ))}
