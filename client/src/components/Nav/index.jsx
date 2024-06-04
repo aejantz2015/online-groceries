@@ -16,41 +16,38 @@ function Nav() {
             Home
           </NavLink>
         </li>
-        <li>
-          <NavLink
-            to="/login"
-            className={
-              currentPage === "/login" ? "nav-link active" : "nav-link"
-            }
-          >
-            Login
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/account"
-            className={
-              currentPage === "/account" ? "nav-link active" : "nav-link"
-            }
-          >
-            My Account
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/signup"
-            className={
-              currentPage === "/signup" ? "nav-link active" : "nav-link"
-            }
-          >
-            Signup
-          </NavLink>
-        </li>
-        <li>
-          <a href="/" onClick={() => auth.logout()}>
-            Logout
-          </a>
-        </li>
+        {auth.loggedIn() ? (
+          <>
+            <li>
+              <a href="/" onClick={() => auth.logout()}>
+                Logout
+              </a>
+            </li>
+          </>
+        ) : (
+          <>
+            <li>
+              <NavLink
+                to="/login"
+                className={
+                  currentPage === "/login" ? "nav-link active" : "nav-link"
+                }
+              >
+                Login
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/signup"
+                className={
+                  currentPage === "/signup" ? "nav-link active" : "nav-link"
+                }
+              >
+                Signup
+              </NavLink>
+            </li>
+          </>
+        )}
       </ul>
     </>
   );
