@@ -5,7 +5,7 @@ import "./style.css";
 
 export const Cart = () => {
   const [{ cart }, dispatch] = useAppState();
-
+  console.log(cart);
   const calculateTotal = () => {
     return cart
       .reduce((acc, item) => acc + item.price * item.quantity, 0)
@@ -36,7 +36,7 @@ export const Cart = () => {
               <img src={`/images/${item.image}`} alt={item.name} width="100" />
               <div className="item-details">
                 <h2>{item.name}</h2>
-                <p>${item.price.toFixed(2)}</p>
+                <p>${item.price}</p>
               </div>
               <div className="item-actions">
                 <input

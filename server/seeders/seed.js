@@ -33,7 +33,7 @@ db.once("open", async () => {
         description: "12 pack",
         image: "coke.png",
         price: 4.99,
-        quantity: 7,
+        quantity: 1,
         department: department[2]._id,
       },
       {
@@ -41,7 +41,7 @@ db.once("open", async () => {
         description: "52 oz.",
         image: "lemonade.png",
         price: 3.47,
-        quantity: 11,
+        quantity: 1,
         department: department[2]._id,
       },
       {
@@ -49,7 +49,7 @@ db.once("open", async () => {
         description: "85 ounce",
         image: "orangejuice.png",
         price: 7.28,
-        quantity: 3,
+        quantity: 1,
         department: department[2]._id,
       },
       {
@@ -57,7 +57,7 @@ db.once("open", async () => {
         description: "35 pack",
         image: "packofwater.png",
         price: 3.78,
-        quantity: 12,
+        quantity: 1,
         department: department[2]._id,
       },
       {
@@ -65,7 +65,7 @@ db.once("open", async () => {
         description: "1 gallon",
         image: "sweettea.png",
         price: 2.25,
-        quantity: 11,
+        quantity: 1,
         department: department[2]._id,
       },
       {
@@ -73,7 +73,7 @@ db.once("open", async () => {
         description: "dozen",
         image: "eggs.png",
         price: 2.52,
-        quantity: 13,
+        quantity: 1,
         department: department[1]._id,
       },
       {
@@ -81,7 +81,7 @@ db.once("open", async () => {
         description: "29 oz",
         image: "chickennuggets.png",
         price: 8.97,
-        quantity: 4,
+        quantity: 1,
         department: department[5]._id,
       },
       {
@@ -89,7 +89,7 @@ db.once("open", async () => {
         description: "8 slices",
         image: "garlicbread.png",
         price: 4.24,
-        quantity: 10,
+        quantity: 1,
         department: department[5]._id,
       },
       {
@@ -97,7 +97,7 @@ db.once("open", async () => {
         description: "46 fl oz",
         image: "icecream.png",
         price: 5.13,
-        quantity: 9,
+        quantity: 1,
         department: department[5]._id,
       },
       {
@@ -105,7 +105,7 @@ db.once("open", async () => {
         description: "Classic Crust",
         image: "pizza.png",
         price: 6.81,
-        quantity: 12,
+        quantity: 1,
         department: department[5]._id,
       },
       {
@@ -113,7 +113,7 @@ db.once("open", async () => {
         description: "30 oz",
         image: "potatoes.png",
         price: 6.42,
-        quantity: 8,
+        quantity: 1,
         department: department[5]._id,
       },
       {
@@ -121,7 +121,7 @@ db.once("open", async () => {
         description: "16 oz",
         image: "bacon.png",
         price: 5.77,
-        quantity: 8,
+        quantity: 1,
         department: department[3]._id,
       },
       {
@@ -129,7 +129,7 @@ db.once("open", async () => {
         description: "2.25 lbs",
         image: "chicken.png",
         price: 9.82,
-        quantity: 13,
+        quantity: 1,
         department: department[3]._id,
       },
       {
@@ -137,7 +137,7 @@ db.once("open", async () => {
         description: "16 oz",
         image: "groundbeef.png",
         price: 3.33,
-        quantity: 10,
+        quantity: 1,
         department: department[3]._id,
       },
       {
@@ -145,7 +145,7 @@ db.once("open", async () => {
         description: "1 lb",
         image: "salmon.png",
         price: 7.14,
-        quantity: 4,
+        quantity: 1,
         department: department[3]._id,
       },
       {
@@ -153,7 +153,7 @@ db.once("open", async () => {
         description: "16 oz",
         image: "shrimp.png",
         price: 8.97,
-        quantity: 5,
+        quantity: 1,
         department: department[3]._id,
       },
       {
@@ -161,7 +161,7 @@ db.once("open", async () => {
         description: "32 oz",
         image: "brownsugar.png",
         price: 1.88,
-        quantity: 10,
+        quantity: 1,
         department: department[4]._id,
       },
       {
@@ -169,7 +169,7 @@ db.once("open", async () => {
         description: "4 pack",
         image: "chefb.png",
         price: 6.21,
-        quantity: 5,
+        quantity: 1,
         department: department[4]._id,
       },
       {
@@ -177,7 +177,7 @@ db.once("open", async () => {
         description: "11.5 oz",
         image: "chocochips.png",
         price: 5.92,
-        quantity: 3,
+        quantity: 1,
         department: department[4]._id,
       },
       {
@@ -185,7 +185,7 @@ db.once("open", async () => {
         description: "8.75 oz",
         image: "garlicpowd.png",
         price: 7.14,
-        quantity: 5,
+        quantity: 1,
         department: department[4]._id,
       },
       {
@@ -193,7 +193,7 @@ db.once("open", async () => {
         description: "14.5 oz",
         image: "tomato.png",
         price: 1.28,
-        quantity: 24,
+        quantity: 1,
         department: department[4]._id,
       },
       {
@@ -201,7 +201,7 @@ db.once("open", async () => {
         description: "3 lb",
         image: "apples.png",
         price: 5.25,
-        quantity: 6,
+        quantity: 1,
         department: department[0]._id,
       },
       {
@@ -209,7 +209,7 @@ db.once("open", async () => {
         description: "3 pack",
         image: "bellpeps.png",
         price: 4.44,
-        quantity: 7,
+        quantity: 1,
         department: department[0]._id,
       },
       {
@@ -217,7 +217,7 @@ db.once("open", async () => {
         description: "6 oz",
         image: "blackberries.png",
         price: 4.64,
-        quantity: 2,
+        quantity: 1,
         department: department[0]._id,
       },
       {
@@ -225,7 +225,7 @@ db.once("open", async () => {
         description: "5 oz",
         image: "broccoli.png",
         price: 1.49,
-        quantity: 11,
+        quantity: 1,
         department: department[0]._id,
       },
       {
@@ -233,7 +233,7 @@ db.once("open", async () => {
         description: "1 lb",
         image: "strawberries.png",
         price: 4.88,
-        quantity: 12,
+        quantity: 1,
         department: department[0]._id,
       },
       {
@@ -241,7 +241,7 @@ db.once("open", async () => {
         description: "10.5 oz",
         image: "cheezit.png",
         price: 4.82,
-        quantity: 6,
+        quantity: 1,
         department: department[6]._id,
       },
       {
@@ -249,7 +249,7 @@ db.once("open", async () => {
         description: "22 pouches",
         image: "fruitsnack.png",
         price: 7.45,
-        quantity: 7,
+        quantity: 1,
         department: department[6]._id,
       },
       {
@@ -257,7 +257,7 @@ db.once("open", async () => {
         description: "6.6 oz",
         image: "goldfish.png",
         price: 3.74,
-        quantity: 8,
+        quantity: 1,
         department: department[6]._id,
       },
       {
@@ -265,7 +265,7 @@ db.once("open", async () => {
         description: "Family Size",
         image: "oreos.png",
         price: 5.55,
-        quantity: 5,
+        quantity: 1,
         department: department[6]._id,
       },
       {
@@ -273,7 +273,7 @@ db.once("open", async () => {
         description: "10 oz",
         image: "teddygrahams.png",
         price: 6.32,
-        quantity: 4,
+        quantity: 1,
         department: department[6]._id,
       },
     ]);

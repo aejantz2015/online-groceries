@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useAppState } from "../../utils/stateContext";
 import { ADD_TO_CART } from "../../utils/actions";
-import "./style.css" 
+import "./style.css";
 
 const ItemList = ({ items }) => {
   const [{ cart }, dispatch] = useAppState();
@@ -14,7 +14,7 @@ const ItemList = ({ items }) => {
   }
 
   return (
-    <div className ='display'> 
+    <div className="display">
       {items.map((item) => (
         <div key={item._id}>
           <Link to={`/items/${item._id}`}>
@@ -26,7 +26,7 @@ const ItemList = ({ items }) => {
           </Link>
           <p>{item.name}</p>
           <p>${item.price}</p>
-          <p>In Stock: {item.quantity}</p>
+
           <button onClick={() => addToCart(item)}>Add To Cart</button>
         </div>
       ))}
