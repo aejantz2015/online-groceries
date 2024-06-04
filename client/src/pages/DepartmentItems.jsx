@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useAppState } from "../utils/stateContext";
 import { ADD_TO_CART } from "../utils/actions";
-import "./departmentItems.css"
+import "./departmentItems.css";
 
 const DepartmentList = () => {
   const { name } = useParams();
@@ -45,8 +45,8 @@ const DepartmentList = () => {
             />
           </Link>
           <p>{item.name}</p>
-          <p>${item.prce}</p>
-          <p>In Stock: {item.quantity}</p>
+          <p>${item.price}</p>
+
           <button onClick={() => addToCart(item)}>Add to Cart</button>
         </div>
       ))}

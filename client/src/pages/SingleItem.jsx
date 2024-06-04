@@ -35,7 +35,6 @@ export const ItemView = () => {
       />
       <p>{myItem.description}</p>
       <p>${myItem.price}</p>
-      <p>In stock: {myItem.quantity}</p>
       <button onClick={() => addToCart(myItem)}>Add To Cart</button>
     </div>
   );
